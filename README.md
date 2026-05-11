@@ -49,11 +49,11 @@ Inspired by systems used in **Uber** (driver tracking), **aviation** (flight tra
 ┌──────────────────────▼──────────────────────────────────┐
 │                  FASTAPI BACKEND                        │
 │                                                         │
-│  ┌─────────────┐  ┌─────────────┐  ┌────────────────┐  │
-│  │  REST API   │  │  WebSocket  │  │   ML Engine    │  │
-│  │  /entities  │  │ /ws/posit.. │  │  /ml/{id}/..   │  │
-│  │  /positions │  │             │  │                │  │
-│  └──────┬──────┘  └──────┬──────┘  └───────┬────────┘  │
+│  ┌─────────────┐  ┌─────────────┐  ┌────────────────┐   │
+│  │  REST API   │  │  WebSocket  │  │   ML Engine    │   │
+│  │  /entities  │  │ /ws/posit.. │  │  /ml/{id}/..   │   │
+│  │  /positions │  │             │  │                │   │
+│  └──────┬──────┘  └──────┬──────┘  └───────┬────────┘   │
 │         │                │                 │            │
 │  ┌──────▼────────────────▼─────────────────▼────────┐   │
 │  │                SERVICE LAYER                     │   │
@@ -66,7 +66,7 @@ Inspired by systems used in **Uber** (driver tracking), **aviation** (flight tra
 │  └──────────────────────┬───────────────────────────┘   │
 │                         │                               │
 │  ┌──────────────────────▼───────────────────────────┐   │
-│  │          DATABASE (SQLAlchemy Async)              │   │
+│  │          DATABASE (SQLAlchemy Async)             │   │
 │  │       entities · positions · events              │   │
 │  └──────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
